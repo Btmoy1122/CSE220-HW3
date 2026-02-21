@@ -2,7 +2,7 @@
 #include "MyBitManipulation.h"
 #include "Myfloat.h"
 #include "MyIntegers.h"
-
+//Brandon Moy 116187802
 int main(void) {
 
    /* PART 1: Bit Manipulation Tests */
@@ -39,6 +39,16 @@ int main(void) {
    
    /* PART 3: Integer Representation Conversion */
    repr_convert('2', '2', 0x59f2ca50);
+   repr_convert('Z', '2', 0x00000005);
+   repr_convert('2', 'Z', 0x00000005);
+   repr_convert('2', 'S', 0x80000000);
+   repr_convert('S', '2', 0x80000000);
+   repr_convert('S', 'S', 0x80000000);
+   repr_convert('S', '2', 0x80000001);
+   repr_convert('2', 'S', 0xFFFFFFFF);
+   repr_convert('2', 'S', 0x00000005);
+   repr_convert('F', '2', 0x00394812);
+   repr_convert('S', '2', 0x00394812);
 
    return 0;
 }
